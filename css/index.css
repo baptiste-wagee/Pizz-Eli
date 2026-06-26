@@ -1,0 +1,133 @@
+/* --- Reset & Variables --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --dark-bg: #15151E;
+    --main-accent: #E74C3C; /* Rouge italien */
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Police secondaire */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Pour éviter les barres de défilement pendant l'anim */
+}
+
+/* --- Hero Header --- */
+.hero-header {
+    text-align: center;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
+    height: 150px; /* Hauteur fixe pour le conteneur */
+}
+
+/* --- Style du Logo SVG --- */
+.logo-svg {
+    width: 400px;
+    height: auto;
+    position: absolute; /* Pour positionner le texte précisément */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-text {
+    font-family: 'Dancing Script', cursive; /* Police manuscrite */
+    font-size: 5rem;
+    fill: #fff;
+    opacity: 0; /* Caché au début */
+    animation: fadeInLogo 0.5s ease forwards;
+}
+
+/* --- Animation d'écriture (SVG Path) --- */
+/* Astuce : stroke-dasharray et stroke-dashoffset donnent l'effet d'écriture */
+#text-path {
+    stroke: #fff;
+    stroke-width: 4;
+    fill: none;
+    stroke-dasharray: 1000; /* Taille du trait */
+    stroke-dashoffset: 1000; /* Position du début (caché) */
+    animation: drawText 2.5s ease-in-out forwards;
+}
+
+@keyframes drawText {
+    to {
+        stroke-dashoffset: 0; /* Le trait se dévoile complètement */
+    }
+}
+
+@keyframes fadeInLogo {
+    to {
+        opacity: 1; /* Le texte apparaît */
+    }
+}
+
+/* --- Style et Animation de la Pizza --- */
+.pizza-rolling {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: -100px; /* Commence hors de l'écran à gauche */
+    top: 35px;
+    animation: rollInPizza 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    /* Délai pour qu'elle arrive APRES l'écriture */
+    animation-delay: 1s;
+}
+
+.pizza-rolling img {
+    width: 100%;
+    height: 100%;
+    animation: spinPizza 1.5s linear forwards; /* La pizza tourne sur elle-même */
+    animation-delay: 2s;
+}
+
+@keyframes rollInPizza {
+    0% { left: -100px; }
+    100% { left: calc(50% + 170px); /* Position à côté de "PIZZ'ELI" */ }
+}
+
+@keyframes spinPizza {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); /* Fait un tour complet */ }
+}
+
+/* --- Le reste du contenu (apparaît après) --- */
+.hero-content {
+    opacity: 0;
+    animation: fadeInContent 1s ease forwards;
+    animation-delay: 3.5s; /* Apparaît après toute l'animation */
+}
+
+@keyframes fadeInContent {
+    to { opacity: 1; }
+}
+
+.slogan {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--main-accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
