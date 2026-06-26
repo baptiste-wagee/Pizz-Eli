@@ -1,34 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizz'Eli - Votre Pizzeria</title>
+    <title>PIZZ'ELI</title>
+
     <link rel="stylesheet" href="css/index.css">
-    <!-- Inclusion de la police Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header class="hero-header">
-        <div class="logo-container">
-            <!-- 1. Le Texte en SVG (pour le tracé) -->
-            <svg class="logo-svg" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-                <path id="text-path" fill="none" stroke="#fff" stroke-width="3" d="M10,70 Q50,20 100,70 T190,70 T280,70" />
-                <text class="logo-text" x="15" y="80">PIZZ'ELI</text>
-            </svg>
+<nav id="navbar">
 
-            <!-- 2. L'image de la pizza qui roule -->
-            <div class="pizza-rolling">
-                <img src="pizza-icon.svg" alt="Pizza icon" id="pizza-icon">
-            </div>
-        </div>
+    <div class="logo">
+        PIZZ'ELI 🍕
+    </div>
 
-        <div class="hero-content hidden">
-            <p class="slogan">L'authentique pizza napolitaine livrée chez vous.</p>
-            <a href="#menu" class="cta-button">Découvrir la carte</a>
-        </div>
-    </header>
+    <ul>
+
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#menu">Carte</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<header id="hero">
+
+    <div class="hero-content">
+
+        <h1>PIZZ'ELI</h1>
+
+        <p>
+            L'authentique pizza napolitaine livrée chez vous.
+        </p>
+
+        <a href="#menu" class="scroll">
+
+            ↓
+
+        </a>
+
+    </div>
+
+</header>
+
+<main>
+
+<section id="menu">
+
+<h2>Notre Carte</h2>
+
+<p>
+
+Ici viendra toute ta carte.
+
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+
+Adresse • Téléphone • Horaires
+
+</p>
+
+</section>
+
+</main>
+
+<script src="js/main.js"></script>
 
 </body>
+
 </html>

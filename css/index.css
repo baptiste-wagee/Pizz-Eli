@@ -1,133 +1,260 @@
-/* --- Reset & Variables --- */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-    --dark-bg: #15151E;
-    --main-accent: #E74C3C; /* Rouge italien */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-    background-color: var(--dark-bg);
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Police secondaire */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Pour éviter les barres de défilement pendant l'anim */
+html{
+
+scroll-behavior:smooth;
+
 }
 
-/* --- Hero Header --- */
-.hero-header {
-    text-align: center;
-    position: relative;
+body{
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:#15151E;
+
+color:white;
+
+overflow-x:hidden;
+
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    position: relative;
-    height: 150px; /* Hauteur fixe pour le conteneur */
+/**************** NAVBAR **************/
+
+#navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:35px 60px;
+
+transition:.4s;
+
+z-index:999;
+
+background:transparent;
+
 }
 
-/* --- Style du Logo SVG --- */
-.logo-svg {
-    width: 400px;
-    height: auto;
-    position: absolute; /* Pour positionner le texte précisément */
-    left: 50%;
-    transform: translateX(-50%);
+#navbar.scrolled{
+
+padding:18px 60px;
+
+background:rgba(21,21,30,.95);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+
 }
 
-.logo-text {
-    font-family: 'Dancing Script', cursive; /* Police manuscrite */
-    font-size: 5rem;
-    fill: #fff;
-    opacity: 0; /* Caché au début */
-    animation: fadeInLogo 0.5s ease forwards;
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+font-family:'Dancing Script',cursive;
+
 }
 
-/* --- Animation d'écriture (SVG Path) --- */
-/* Astuce : stroke-dasharray et stroke-dashoffset donnent l'effet d'écriture */
-#text-path {
-    stroke: #fff;
-    stroke-width: 4;
-    fill: none;
-    stroke-dasharray: 1000; /* Taille du trait */
-    stroke-dashoffset: 1000; /* Position du début (caché) */
-    animation: drawText 2.5s ease-in-out forwards;
+#navbar ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
 }
 
-@keyframes drawText {
-    to {
-        stroke-dashoffset: 0; /* Le trait se dévoile complètement */
-    }
+#navbar a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
 }
 
-@keyframes fadeInLogo {
-    to {
-        opacity: 1; /* Le texte apparaît */
-    }
+#navbar a:hover{
+
+color:#E74C3C;
+
 }
 
-/* --- Style et Animation de la Pizza --- */
-.pizza-rolling {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    left: -100px; /* Commence hors de l'écran à gauche */
-    top: 35px;
-    animation: rollInPizza 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    /* Délai pour qu'elle arrive APRES l'écriture */
-    animation-delay: 1s;
+/**************** HERO **************/
+
+#hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(15,15,20,.75),rgba(15,15,20,.95)),
+url("../images/background.jpg");
+
+background-size:cover;
+
+background-position:center;
+
 }
 
-.pizza-rolling img {
-    width: 100%;
-    height: 100%;
-    animation: spinPizza 1.5s linear forwards; /* La pizza tourne sur elle-même */
-    animation-delay: 2s;
+.hero-content{
+
+animation:fadeUp 1.3s;
+
 }
 
-@keyframes rollInPizza {
-    0% { left: -100px; }
-    100% { left: calc(50% + 170px); /* Position à côté de "PIZZ'ELI" */ }
+.hero-content h1{
+
+font-size:95px;
+
+font-family:'Dancing Script',cursive;
+
+margin-bottom:20px;
+
 }
 
-@keyframes spinPizza {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); /* Fait un tour complet */ }
+.hero-content p{
+
+font-size:22px;
+
+color:#ddd;
+
+margin-bottom:50px;
+
 }
 
-/* --- Le reste du contenu (apparaît après) --- */
-.hero-content {
-    opacity: 0;
-    animation: fadeInContent 1s ease forwards;
-    animation-delay: 3.5s; /* Apparaît après toute l'animation */
+.scroll{
+
+display:inline-block;
+
+font-size:40px;
+
+color:#E74C3C;
+
+text-decoration:none;
+
+animation:bounce 1.5s infinite;
+
 }
 
-@keyframes fadeInContent {
-    to { opacity: 1; }
+/**************** MAIN **************/
+
+main{
+
+background:white;
+
+color:#222;
+
 }
 
-.slogan {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #ddd;
+section{
+
+min-height:100vh;
+
+padding:120px 80px;
+
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: var(--main-accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+section h2{
+
+font-size:42px;
+
+margin-bottom:25px;
+
 }
 
-.cta-button:hover {
-    background-color: #c0392b;
+/**************** ANIMATIONS **************/
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/************* Responsive *************/
+
+@media(max-width:768px){
+
+#navbar{
+
+padding:25px;
+
+}
+
+.hero-content h1{
+
+font-size:60px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+section{
+
+padding:80px 25px;
+
+}
+
 }
