@@ -1,53 +1,79 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: Arial, sans-serif; background: #15151E; color: white; overflow-x: hidden; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #15151E;
+    color: white;
+    overflow-x: hidden;
+}
 
 /* --- Navbar --- */
 #navbar {
     position: fixed;
-    top: 0; left: 0; width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: flex-end; /* FIX 1 : menu collé à droite */
+    justify-content: flex-end;
     align-items: center;
     padding: 35px 60px;
     z-index: 999;
     transition: padding 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Le logo : parfaitement centré sur l'écran */
+/* Logo : centré en grand */
 #logo-container {
     font-family: 'Dancing Script', cursive;
     font-size: 95px;
     position: fixed;
-    top: 50%;                       /* FIX 2 : 50% exact, pas 50vh */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: font-size 0.5s ease, top 0.5s ease, left 0.5s ease, transform 0.5s ease;
+    transition: all 0.5s ease;
     pointer-events: none;
     white-space: nowrap;
     z-index: 1000;
     line-height: 1;
 }
 
-/* --- État SCROLLED --- */
+/* Navbar après scroll */
 #navbar.scrolled {
     padding: 30px 60px;
     background: rgba(21, 21, 30, 0.95);
     backdrop-filter: blur(10px);
 }
 
-/* Le logo monte et reste centré dans la navbar */
+/* Logo en haut */
 #logo-container.sticky {
+    top: 40px;
+    transform: translate(-50%, -50%);
     font-size: 38px;
-    top: 27px;
-    left: 50%;
-    transform: translate(-50%, 0);
     pointer-events: auto;
 }
 
-#navbar ul { display: flex; list-style: none; gap: 35px; }
-#navbar a { color: white; text-decoration: none; font-weight: bold; }
-#navbar a:hover { color: #E74C3C; }
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navbar a:hover {
+    color: #E74C3C;
+}
 
 /* --- Hero --- */
 #hero {
@@ -58,13 +84,42 @@ body { font-family: Arial, sans-serif; background: #15151E; color: white; overfl
     text-align: center;
 }
 
-.hero-content p { font-size: 22px; color: #ddd; margin-top: 220px; } /* FIX 3 : plus d'espace sous le grand logo */
-.scroll { font-size: 40px; color: #E74C3C; text-decoration: none; display: inline-block; animation: bounce 1.5s infinite; }
+.hero-content p {
+    font-size: 22px;
+    color: #ddd;
+    margin-top: 620px;
+}
+
+.scroll {
+    font-size: 40px;
+    color: #E74C3C;
+    text-decoration: none;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
 
 /* --- Main --- */
-main { background: white; color: #222; }
-section { min-height: 100vh; padding: 120px 80px; }
-h2 { font-size: 42px; margin-bottom: 25px; }
+main {
+    background: white;
+    color: #222;
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 80px;
+}
+
+h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
 
 /* --- Animations --- */
-@keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(12px); } }
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(12px);
+    }
+}
