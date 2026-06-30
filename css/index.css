@@ -126,6 +126,23 @@ h2 {
 /* =======================================
             MENU INTERACTIF
 ======================================= */
+#menu {
+    /* Remplace 'chemin/vers/ton-image.jpg' par le chemin réel de ton image */
+    background-image: url('../images/fondMenu.png');
+
+    /* Pour que l'image couvre toute la zone sans se répéter */
+    background-size: cover;
+
+    /* Pour centrer l'image */
+    background-position: center;
+
+    /* Important pour ne pas qu'elle bouge avec le scroll (optionnel) */
+    background-attachment: fixed;
+
+    /* Pour assurer que ton texte reste lisible par-dessus */
+    position: relative;
+    color: white; /* Si ton texte est sombre, change cette couleur */
+}
 
 #menu h2 {
     text-align: center;
