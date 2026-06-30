@@ -4,113 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIZZ'ELI</title>
+
     <link rel="stylesheet" href="css/index.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Logo indépendant -->
-    <div id="logo-container">PIZZ'ELI 🍕</div>
+<!-- Logo -->
+<div id="logo-container">PIZZ'ELI 🍕</div>
 
-    <nav id="navbar">
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#menu">Carte</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Navigation -->
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#menu">Carte</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <header id="hero">
-        <div class="hero-content">
-            <p>L'authentique pizza napolitaine livrée chez vous.</p>
-            <a href="#menu" class="scroll">↓</a>
+<!-- Hero -->
+<header id="hero">
+    <div class="hero-content">
+        <p>L'authentique pizza napolitaine livrée chez vous.</p>
+        <a href="#menu" class="scroll">↓</a>
+    </div>
+</header>
+
+<main>
+
+    <!-- ===================== MENU ===================== -->
+
+    <section id="menu">
+
+        <h2>Notre Carte</h2>
+
+        <!-- Onglets -->
+
+        <div class="menu-tabs">
+
+            <button class="tab active" data-tab="pizzas">
+                🍕 Pizzas
+            </button>
+
+            <button class="tab" data-tab="desserts">
+                🍰 Desserts
+            </button>
+
+            <button class="tab" data-tab="boissons">
+                🥤 Boissons
+            </button>
+
         </div>
-    </header>
 
-    <main>
-        <section id="menu">
-            <h2>Notre Carte</h2>
+        <!-- Le contenu sera rempli automatiquement -->
 
-            <div class="menu-nav">
-                <a href="#pizzas">Pizzas</a>
-                <a href="#desserts">Desserts</a>
-                <a href="#boissons">Boissons</a>
-            </div>
+        <div id="menu-content"></div>
 
-            <div id="pizzas" class="menu-category">
-                <h3>🍕 Pizzas</h3>
+    </section>
 
-                <div class="menu-grid">
+    <!-- ===================== CONTACT ===================== -->
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Margherita</h4>
-                            <span>13,50 €</span>
-                        </div>
-                        <p>Tomate, mozzarella fior di latte, basilic, huile d'olive extra vierge.</p>
-                    </div>
+    <section id="contact">
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Reine</h4>
-                            <span>13,50 €</span>
-                        </div>
-                        <p>Tomate, mozzarella, jambon supérieur, champignons de Paris, olives noires.</p>
-                    </div>
+        <h2>Contact</h2>
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Diavola</h4>
-                            <span>13,50 €</span>
-                        </div>
-                        <p>Tomate, mozzarella, spianata piccante, piments, olives noires.</p>
-                    </div>
+        <p>Adresse • Téléphone • Horaires</p>
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Calzone Farcie</h4>
-                            <span>18,50 €</span>
-                        </div>
-                        <p>Mozzarella fior di latte, ricotta, jambon supérieur, champignons, poivre.</p>
-                    </div>
+    </section>
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Bufala</h4>
-                            <span>15,50 €</span>
-                        </div>
-                        <p>Mozzarella di Buffala, tomates cerises confites, basilic, crème d'artichaut, parmesan.</p>
-                    </div>
+</main>
 
-                    <div class="pizza-card">
-                        <div class="pizza-header">
-                            <h4>Canadienne</h4>
-                            <span>15,50 €</span>
-                        </div>
-                        <p>Mozzarella di Buffala, tomates cerises confites, champignons, poivre noir.</p>
-                    </div>
+<script src="JS/index.js"></script>
 
-                </div>
-            </div>
-
-            <div id="desserts" class="menu-category">
-                <h3>🍰 Desserts</h3>
-                <p>À venir...</p>
-            </div>
-
-            <div id="boissons" class="menu-category">
-                <h3>🥤 Boissons</h3>
-                <p>À venir...</p>
-            </div>
-
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Adresse • Téléphone • Horaires</p>
-        </section>
-    </main>
-
-    <script src="JS/index.js"></script>
 </body>
 </html>
