@@ -90,7 +90,8 @@ const menus = {
         {
             nom: "Coca-Cola",
             prix: "2,50€",
-            description: "33 cl"
+            description: "33 cl",
+            image: "../images/coca.png"
         },
 
         {
@@ -128,6 +129,8 @@ function afficherMenu(categorie) {
         grid.innerHTML += `
 
         <div class="menu-card">
+            
+            <img src="${item.image}" alt="${item.nom}" class="menu-image">
 
             <div class="menu-header">
 

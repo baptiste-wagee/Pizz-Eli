@@ -149,6 +149,13 @@ h2 {
     margin-bottom: 50px;
 }
 
+.menu-image {
+    width: 10%;
+    height: 180px;      /* Ajuste la hauteur selon tes besoins */
+    object-fit: cover;  /* Permet de remplir l'espace sans déformer l'image */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
 /* ---------- Onglets ---------- */
 
 .menu-tabs {
