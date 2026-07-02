@@ -340,6 +340,59 @@ h2 {
     color: #cccccc; /* Un gris clair pour le sous-texte */
 }
 
+/* ---------- localisation ---------- */
+
+#localisation {
+    display: flex;            /* Active le mode "boîtes côte à côte" */
+    justify-content: space-between; /* Espace tes deux blocs au maximum */
+    align-items: center;      /* Centre les blocs verticalement */
+    padding: 100px 80px;      /* Ajoute de l'air autour */
+    background-color: #15151E;
+    color: white;
+}
+
+/* On donne une largeur aux enfants pour qu'ils se partagent l'espace */
+.loc-text {
+    flex: 1; /* Prend la moitié de l'espace disponible */
+    text-align: center;
+}
+
+.loc-map {
+    flex: 1; /* Prend l'autre moitié */
+    display: flex;
+    justify-content: center;
+}
+
+.loc-text .img{
+    width: 20px;       /* Taille fixe pour tes icônes */
+    height: 25px;
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    vertical-align: middle; /* Aligne l'icône avec la ligne de texte */
+}
+
+.loc-text h2 {
+    font-family: 'Dancing Script', cursive; /* La police de ton logo */
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Titre "Pizz'Eli Sainghin..." */
+.loc-text p:nth-child(2) {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Texte courant et Gras */
+.loc-text p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Cibler spécifiquement les lignes avec les infos pour les mettre en gras */
+.loc-text p:nth-child(n+5) { /* Cible à partir de la 5ème ligne */
+    font-weight: bold;
+}
 /* ---------- Responsive ---------- */
 
 @media (max-width:900px){
