@@ -281,6 +281,65 @@ h2 {
 
 }
 
+/* ---------- Commander ---------- */
+
+.btn-commander {
+    display: inline-block;
+    background-color: #E74C3C;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-commander:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+#Commander {
+    background: #15151E; /* Pour rester en harmonie avec le reste */
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.commander-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-group p {
+    margin-top: 20px;
+    color: #ccc;
+}
+
+.phone-link {
+    color: #E74C3C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#Commander {
+    background-color: #15151E; /* Ton fond sombre */
+    color: #ffffff;           /* Force le texte en blanc */
+    padding: 150px 20px;
+}
+
+#Commander h2 {
+    color: #ffffff; /* S'assure que le titre est bien blanc */
+    margin-bottom: 40px;
+}
+
+.cta-group {
+    margin-top: 30px;
+}
+#Commander p {
+    color: #cccccc; /* Un gris clair pour le sous-texte */
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width:900px){

@@ -10,43 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Logo -->
 <div id="logo-container">PIZZ'ELI 🍕</div>
-
-<!-- Navigation -->
 <nav id="navbar">
     <ul>
         <li><a href="#">Accueil</a></li>
-        <li><a href="#menu">Carte</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#menu">Carte</a></li> <!--TODO (Faire les images et les pizza qui manque)-->
+        <li><a href="#Commander">Commander</a></li>
+        <li><a href="#localisation">Localisation</a></li> <!--TODO -->
+        <li><a href="#mention-legales">Mention legales</a></li> <!--TODO -->
+        <li><a href="#Recrutement">Recrutement</a></li> <!--TODO -->
     </ul>
 </nav>
 
-<!-- Hero -->
 <header id="hero">
     <div class="hero-content">
         <p>L'authentique pizza napolitaine livrée chez vous.</p>
         <a href="#menu" class="scroll">↓</a>
     </div>
 </header>
-
 <main>
-
     <!-- ===================== MENU ===================== -->
-
     <section id="menu">
-
         <h2>Notre Carte</h2>
-
-        <!-- Onglets -->
-
         <div class="menu-tabs">
-
             <button class="tab active" data-tab="pizzas">
                 🍕 Pizzas
             </button>
-
             <button class="tab" data-tab="desserts">
                 🍰 Desserts
             </button>
@@ -54,18 +43,25 @@
             <button class="tab" data-tab="boissons">
                 🥤 Boissons
             </button>
-
         </div>
-
-        <!-- Le contenu sera rempli automatiquement -->
-
-        <div id="menu-content"></div>
+        <!-- Le contenu sera rempli automatiquement grace au js -->
+        <div id="menu-content"></div><!-- Hero -->
 
     </section>
 
-    <!-- ===================== CONTACT ===================== -->
+    <!-- ===================== Commander ===================== -->
+    <section id="Commander">
+        <div class="commander-container">
+            <h2>Prêt pour une dégustation ?</h2>
+            <p>Commandez vos pizzas préférées en quelques clics et faites-vous livrer rapidement.</p>
 
-    <section id="contact">
+            <div class="cta-group">
+                <a href="https://commande.pizz-eli.com/" class="btn-commander">Commander en ligne</a>
+                <p>Ou appelez-nous au <a href="tel:0320961577" class="phone-link">03 20 96 15 77</a></p>
+            </div>
+        </div>
+    </section>
+        <section id="contact">
 
         <h2>Contact</h2>
 
