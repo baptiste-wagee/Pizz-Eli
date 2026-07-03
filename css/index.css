@@ -393,6 +393,87 @@ h2 {
 .loc-text p:nth-child(n+5) { /* Cible à partir de la 5ème ligne */
     font-weight: bold;
 }
+
+/* =======================================
+            RECRUTEMENT
+======================================= */
+#Recrutement {
+    background-color: #15151E;
+    color: white;
+    text-align: center;
+}
+
+.recrutement-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recrutement-intro {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.jobs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* On réutilise le style de tes cartes de menu pour garder une cohérence */
+.job-card {
+    background: #20202b;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    text-align: left;
+    position: relative;
+}
+
+.job-card:hover {
+    border-color: #E74C3C;
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    color: #E74C3C;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.job-card p {
+    color: #cfcfcf;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.job-status {
+    display: inline-block;
+    font-size: 14px;
+    background: rgba(231, 76, 60, 0.1);
+    color: #E74C3C;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.recrutement-cta {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #20202b;
+}
+
+.recrutement-cta p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+}
 /* ---------- Responsive ---------- */
 
 @media (max-width:900px){
