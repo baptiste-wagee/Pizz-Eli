@@ -474,6 +474,25 @@ h2 {
     font-size: 18px;
     color: white;
 }
+
+/* =======================================
+            mention-legales
+======================================= */
+#mention-legales {
+    background-color: #15151E;
+    color: white;
+    text-align: center;
+}
+
+/* =======================================
+            Footer
+======================================= */
+#Footer {
+    background-color: #15151E;
+    color: white;
+    text-align: center;
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width:900px){
