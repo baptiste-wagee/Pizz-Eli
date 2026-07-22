@@ -1,12 +1,17 @@
+<!--
+Nom du fichier : index.htlm
+Auteur : Baptiste Wagée
+Date de création : 02 juillet 2026
+Version : 1.0
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIZZ'ELI</title>
-
     <link rel="stylesheet" href="css/index.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +23,7 @@
         <li><a href="#Commander">Commander</a></li>
         <li><a href="#localisation">Localisation</a></li>
         <li><a href="#Recrutement">Recrutement</a></li>
-        <li><a href="#mention-legales">Mention legales</a></li> <!--TODO -->
+        <li><a href="#mention-legales">Mention legales</a></li>
     </ul>
 </nav>
 
@@ -39,12 +44,10 @@
             <button class="tab" data-tab="desserts">
                 🍰 Desserts
             </button>
-
             <button class="tab" data-tab="boissons">
                 🥤 Boissons
             </button>
         </div>
-        <!-- Le contenu sera rempli automatiquement grace au js -->
         <div id="menu-content"></div>
 
     </section>
@@ -99,11 +102,12 @@
             </div>
             <div class="recrutement-cta">
                 <p>Convaincu d'etre la personne qui changera la pizzeria ?<br> Depose ton cv juste en bas !</p>
-                <!-- Le lien mailto ouvre directement les mails -->
                 <a href="mailto:contact@pizz-eli.com?subject=Candidature%20Pizz'Eli" class="btn-commander">Envoyer mon CV par Email</a>
             </div>
         </div>
     </section>
+
+    <!-- ===================== mention-legales ===================== -->
 
     <section id="mention-legales">
         <div class="loc-text">
@@ -116,9 +120,10 @@
         </div>
     </section>
 
+    <!-- ===================== Footer ===================== -->
+
     <footer id="Footer">
         <div class="footer-container">
-
             <div class="footer-col">
                 <h3>🍕 Pizz'Eli</h3>
                 <p>
@@ -126,40 +131,28 @@
                     Sainghin-en-Weppes.
                 </p>
             </div>
-
             <div class="footer-col">
                 <h3>Navigation</h3>
-
                 <a href="#">Accueil</a>
                 <a href="#menu">Carte</a>
                 <a href="#Commander">Commander</a>
                 <a href="#localisation">Localisation</a>
                 <a href="#Recrutement">Recrutement</a>
             </div>
-
             <div class="footer-col">
                 <h3>Contact</h3>
-
                 <p>📍 31 Rue du Capitaine Lheureux</p>
                 <p>59184 Sainghin-en-Weppes</p>
-
                 <p>📞 03 20 96 15 77</p>
-
                 <p>✉ contact@pizz-eli.com</p>
             </div>
-
         </div>
-
         <div class="footer-bottom">
             © 2026 Pizz'Eli • Tous droits réservés •
             <a href="#mention-legales">Mentions légales</a>
         </div>
     </footer>
 </main>
-
-
-
 <script src="JS/index.js"></script>
-
 </body>
 </html>

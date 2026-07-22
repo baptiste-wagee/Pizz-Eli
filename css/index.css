@@ -1,3 +1,10 @@
+/*
+Nom du fichier : index.css
+Auteur : Baptiste Wagée
+Date de création : 02 juillet 2026
+Version : 1.0
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +22,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Navbar --- */
 #navbar {
     position: fixed;
     top: 0;
@@ -29,7 +35,6 @@ body {
     transition: padding 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Logo : centré en grand */
 #logo-container {
     font-family: 'Dancing Script', cursive;
     font-size: 95px;
@@ -44,14 +49,12 @@ body {
     line-height: 1;
 }
 
-/* Navbar après scroll */
 #navbar.scrolled {
     padding: 30px 60px;
     background: rgba(21, 21, 30, 0.95);
     backdrop-filter: blur(10px);
 }
 
-/* Logo en haut */
 #logo-container.sticky {
     top: 40px;
     transform: translate(-50%, -50%);
@@ -75,7 +78,6 @@ body {
     color: #E74C3C;
 }
 
-/* --- Hero --- */
 #hero {
     height: 100vh;
     display: flex;
@@ -98,7 +100,6 @@ body {
     animation: bounce 1.5s infinite;
 }
 
-/* --- Main --- */
 main {
     background: white;
     color: #222;
@@ -129,16 +130,12 @@ h2 {
 #menu {
     /* Remplace 'chemin/vers/ton-image.jpg' par le chemin réel de ton image */
     background-image: url('../images/fondMenu.png');
-
     /* Pour que l'image couvre toute la zone sans se répéter */
     background-size: cover;
-
     /* Pour centrer l'image */
     background-position: center;
-
     /* Important pour ne pas qu'elle bouge avec le scroll (optionnel) */
     background-attachment: fixed;
-
     /* Pour assurer que ton texte reste lisible par-dessus */
     position: relative;
     color: white; /* Si ton texte est sombre, change cette couleur */
@@ -151,12 +148,11 @@ h2 {
 
 .menu-image {
     width: 10%;
-    height: 180px;      /* Ajuste la hauteur selon tes besoins */
-    object-fit: cover;  /* Permet de remplir l'espace sans déformer l'image */
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
 }
-/* ---------- Onglets ---------- */
 
 .menu-tabs {
     display: flex;
@@ -207,8 +203,6 @@ h2 {
 
 }
 
-/* ---------- Grille ---------- */
-
 .menu-grid {
 
     display: grid;
@@ -218,8 +212,6 @@ h2 {
     gap: 30px;
 
 }
-
-/* ---------- Carte ---------- */
 
 .menu-card {
 
@@ -281,8 +273,6 @@ h2 {
 
 }
 
-/* ---------- Commander ---------- */
-
 .btn-commander {
     display: inline-block;
     background-color: #E74C3C;
@@ -301,7 +291,7 @@ h2 {
 }
 
 #Commander {
-    background: #15151E; /* Pour rester en harmonie avec le reste */
+    background: #15151E;
     text-align: center;
     padding: 100px 20px;
 }
@@ -323,13 +313,13 @@ h2 {
 }
 
 #Commander {
-    background-color: #15151E; /* Ton fond sombre */
-    color: #ffffff;           /* Force le texte en blanc */
+    background-color: #15151E;
+    color: #ffffff;
     padding: 150px 20px;
 }
 
 #Commander h2 {
-    color: #ffffff; /* S'assure que le titre est bien blanc */
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
@@ -337,66 +327,57 @@ h2 {
     margin-top: 30px;
 }
 #Commander p {
-    color: #cccccc; /* Un gris clair pour le sous-texte */
+    color: #cccccc;
 }
 
-/* ---------- localisation ---------- */
-
 #localisation {
-    display: flex;            /* Active le mode "boîtes côte à côte" */
-    justify-content: space-between; /* Espace tes deux blocs au maximum */
-    align-items: center;      /* Centre les blocs verticalement */
-    padding: 100px 80px;      /* Ajoute de l'air autour */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 80px;
     background-color: #15151E;
     color: white;
 }
 
-/* On donne une largeur aux enfants pour qu'ils se partagent l'espace */
 .loc-text {
-    flex: 1; /* Prend la moitié de l'espace disponible */
+    flex: 1;
     text-align: center;
 }
 
 .loc-map {
-    flex: 1; /* Prend l'autre moitié */
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
 .loc-text .img{
-    width: 20px;       /* Taille fixe pour tes icônes */
+    width: 20px;
     height: 25px;
-    margin-right: 10px; /* Espace entre l'icône et le texte */
-    vertical-align: middle; /* Aligne l'icône avec la ligne de texte */
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .loc-text h2 {
-    font-family: 'Dancing Script', cursive; /* La police de ton logo */
+    font-family: 'Dancing Script', cursive;
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-/* Titre "Pizz'Eli Sainghin..." */
 .loc-text p:nth-child(2) {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* Texte courant et Gras */
 .loc-text p {
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
-/* Cibler spécifiquement les lignes avec les infos pour les mettre en gras */
-.loc-text p:nth-child(n+5) { /* Cible à partir de la 5ème ligne */
+.loc-text p:nth-child(n+5) {
     font-weight: bold;
 }
 
-/* =======================================
-            RECRUTEMENT
-======================================= */
 #Recrutement {
     background-color: #15151E;
     color: white;
@@ -423,7 +404,6 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* On réutilise le style de tes cartes de menu pour garder une cohérence */
 .job-card {
     background: #20202b;
     border-radius: 15px;
@@ -475,18 +455,11 @@ h2 {
     color: white;
 }
 
-/* =======================================
-            mention-legales
-======================================= */
 #mention-legales {
     background-color: #15151E;
     color: white;
     text-align: center;
 }
-
-/* =======================================
-                FOOTER
-======================================= */
 
 #Footer {
     background: #101015;

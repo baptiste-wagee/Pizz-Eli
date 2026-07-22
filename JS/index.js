@@ -1,3 +1,8 @@
+// Nom du fichier : index.js
+// Auteur : Baptiste Wagée
+// Date de création : 02 juillet 2026
+// Version : 1.0
+
 const logo = document.getElementById("logo-container");
 const navbar = document.getElementById("navbar");
 
