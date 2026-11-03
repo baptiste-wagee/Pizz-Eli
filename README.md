@@ -6,7 +6,7 @@ Le site a été entièrement réalisé en **HTML**, **CSS** et **JavaScript**, a
 
 ## 🌐 Lien
 
-👉 * Pas encore deployé *
+👉 [Pizz-Eli](https://pizzeli.vercel.app/)
 
 ## 📖 À propos du projet
 
